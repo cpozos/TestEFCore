@@ -4,12 +4,27 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>TEFCore.Core</PackageId>
+    <Version>1.0.0</Version>
+    <PackageTags>Microsoft;EntityFrameworkCore;Unit Tests</PackageTags>
+    <Description>
+      This client library contains useful classes and utilities to work with DbContexts in Unit Tests.
+    </Description>
+    <Authors>Carlos Alberto Pozos Villegas</Authors>
+    <Company>CarlosPV</Company>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryUrl>https://github.com/cpozos/TestEFCore.git</RepositoryUrl>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.1" />
-    <PackageReference Include="xunit.extensibility.core" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\docs\readme.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
