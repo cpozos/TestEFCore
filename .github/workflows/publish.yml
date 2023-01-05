@@ -22,8 +22,8 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
-    - name: Publish TEFCore.Core
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-          PROJECT_FILE_PATH: TEFCore/TEFCore.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+    - name: Pack TEFCore.Core
+      run: dotnet pack --configuration Release
+
+    - name: Pack TEFCore.Core
+      run: dotnet nuget push "bin/Release/TEFCore.Core.1.0.0.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source "github"
