@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>TEFCore.Core</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.0-alpha</Version>
     <PackageTags>Microsoft;EntityFrameworkCore;Unit Tests</PackageTags>
     <Description>
       This client library contains useful classes and utilities to work with DbContexts in Unit Tests.
