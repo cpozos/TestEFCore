@@ -1,9 +1,22 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// <copyright file="MockDbContextExtensions.cs" company="CAPV">
+// Copyright (c) CAPV. All rights reserved.
+// </copyright>
+
+using Microsoft.EntityFrameworkCore;
 
 namespace TEFCore.Extensions;
 
+/// <summary>
+/// 
+/// </summary>
 public static class MockDbContextExtensions
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="dbContextCreator"></param>
+    /// <returns></returns>
     public static MockDbContext<T> Create<T>(Func<DbContextOptions<T>, T> dbContextCreator)
        where T : DbContext
     {
@@ -15,6 +28,13 @@ public static class MockDbContextExtensions
         return new MockDbContext<T>(dbContext);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="applyExtraOptionsBuilder"></param>
+    /// <returns></returns>
+    /// <exception cref="NullReferenceException"></exception>
     public static MockDbContext<T> Create<T>(Action<DbContextOptionsBuilder> applyExtraOptionsBuilder = null)
        where T : DbContext
     {
